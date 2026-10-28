@@ -1,0 +1,424 @@
+[
+  {
+    "slug": "linux-mint",
+    "name": "Linux Mint",
+    "base": "Ubuntu (LTS)",
+    "packageManager": "apt (Flatpak included, no Snap by default)",
+    "releaseModel": "fixed",
+    "desktops": [
+      "Cinnamon",
+      "MATE",
+      "Xfce"
+    ],
+    "difficulty": "beginner",
+    "summary": "A polished, traditional desktop built on Ubuntu LTS that feels familiar to Windows users.",
+    "bestFor": "First-time Linux users who want something that just works.",
+    "pros": [
+      "Very beginner friendly",
+      "Stable and predictable",
+      "Familiar layout"
+    ],
+    "cons": [
+      "Software is not the newest, and the project is moving to a longer release cycle",
+      "Slower to adopt new desktop technology such as Wayland"
+    ],
+    "traits": {
+      "beginner": 5,
+      "stability": 5,
+      "freshness": 2,
+      "customization": 3,
+      "gaming": 3,
+      "lowSpec": 4,
+      "lowMaintenance": 5
+    },
+    "website": "https://linuxmint.com",
+    "lastVerified": "2026-10-28",
+    "confidence": "medium",
+    "sources": [
+      "https://www.gamingonlinux.com/2026/04/linux-mint-confirm-longer-release-cycles-the-next-release-is-planned-for-christmas-2026/",
+      "https://www.phoronix.com/news/Mint-23-Alfa",
+      "https://linuxiac.com/linux-mint/"
+    ],
+    "verificationNote": "Base, editions and no-Snap policy confirmed via news coverage of the Mint team. Mint 23 (Ubuntu 26.04 base) is planned for December 2026, so re-check then. Confirm on linuxmint.com before launch.",
+    "liveDesktop": true
+  },
+  {
+    "slug": "ubuntu",
+    "name": "Ubuntu",
+    "base": "Debian",
+    "packageManager": "apt (plus Snap)",
+    "releaseModel": "fixed",
+    "desktops": [
+      "GNOME"
+    ],
+    "difficulty": "beginner",
+    "summary": "The most widely used desktop Linux, with a huge community and a new LTS every two years.",
+    "bestFor": "Beginners who want the most support and tutorials available.",
+    "pros": [
+      "Huge community and documentation",
+      "Five years of free support on LTS releases",
+      "Wide hardware and software support"
+    ],
+    "cons": [
+      "Firefox and other default apps ship as Snaps, which some users dislike",
+      "Higher recommended hardware than lighter distros",
+      "Less customizable by default"
+    ],
+    "traits": {
+      "beginner": 5,
+      "stability": 4,
+      "freshness": 2,
+      "customization": 2,
+      "gaming": 3,
+      "lowSpec": 2,
+      "lowMaintenance": 4
+    },
+    "website": "https://ubuntu.com",
+    "lastVerified": "2026-10-28",
+    "confidence": "high",
+    "sources": [
+      "https://lists.ubuntu.com/archives/ubuntu-announce/2026-April/000323.html",
+      "https://debugpoint.com/ubuntu-26-04-lts"
+    ],
+    "verificationNote": "26.04 LTS released April 23, 2026 with 5 years of free support and GNOME 50 (no X11 session). Official flavors such as Kubuntu and Xubuntu exist separately.",
+    "liveDesktop": true
+  },
+  {
+    "slug": "fedora",
+    "name": "Fedora Workstation",
+    "base": "Independent",
+    "packageManager": "dnf (DNF5), Flatpak",
+    "releaseModel": "fixed",
+    "desktops": [
+      "GNOME (default)",
+      "KDE Plasma (official edition since Fedora 42)"
+    ],
+    "difficulty": "intermediate",
+    "summary": "A clean, modern distro backed by the Fedora Project that ships recent software on a roughly six-month cycle.",
+    "bestFor": "People who want recent software without going fully rolling.",
+    "pros": [
+      "Modern software, regular releases",
+      "Clean GNOME experience",
+      "Strong developer tooling"
+    ],
+    "cons": [
+      "Each release is supported for only about 13 months, so you upgrade at least yearly",
+      "Some media codecs need extra setup"
+    ],
+    "traits": {
+      "beginner": 3,
+      "stability": 4,
+      "freshness": 4,
+      "customization": 3,
+      "gaming": 3,
+      "lowSpec": 2,
+      "lowMaintenance": 3
+    },
+    "website": "https://fedoraproject.org",
+    "lastVerified": "2026-10-28",
+    "confidence": "medium",
+    "sources": [
+      "https://en.wikipedia.org/wiki/Fedora_Linux",
+      "https://computingforgeeks.com/fedora-44-vs-ubuntu-2604/"
+    ],
+    "verificationNote": "Cycle, support length, GNOME default and KDE edition status confirmed via secondary sources. Re-check on fedoraproject.org before launch.",
+    "liveDesktop": true
+  },
+  {
+    "slug": "debian",
+    "name": "Debian",
+    "base": "Independent",
+    "packageManager": "apt",
+    "releaseModel": "fixed",
+    "desktops": [
+      "GNOME",
+      "KDE Plasma",
+      "Xfce",
+      "Others"
+    ],
+    "difficulty": "intermediate",
+    "summary": "The rock-solid foundation many other distros are built on, with a new stable release roughly every two years.",
+    "bestFor": "Anyone who values stability above all and doesn't need the newest software.",
+    "pros": [
+      "Extremely stable",
+      "Five-year lifecycle: three years of full support plus two of LTS",
+      "Huge package repository",
+      "Very low maintenance"
+    ],
+    "cons": [
+      "Software is older",
+      "Gaming and new hardware can need extra work"
+    ],
+    "traits": {
+      "beginner": 3,
+      "stability": 5,
+      "freshness": 1,
+      "customization": 3,
+      "gaming": 2,
+      "lowSpec": 4,
+      "lowMaintenance": 5
+    },
+    "website": "https://www.debian.org",
+    "lastVerified": "2026-10-28",
+    "confidence": "high",
+    "sources": [
+      "https://www.debian.org/releases/",
+      "https://www.debian.org/releases///stable/"
+    ],
+    "verificationNote": "Official Debian pages confirm the 5-year lifecycle and the current stable release. Desktop list is general knowledge, not checked against the installer.",
+    "liveDesktop": true
+  },
+  {
+    "slug": "pop-os",
+    "name": "Pop!_OS",
+    "base": "Ubuntu",
+    "packageManager": "apt (COSMIC Store also supports Flatpak)",
+    "releaseModel": "fixed",
+    "desktops": [
+      "COSMIC"
+    ],
+    "difficulty": "beginner",
+    "summary": "A developer and gamer friendly distro from hardware maker System76.",
+    "bestFor": "Gamers and developers, especially with Nvidia graphics.",
+    "pros": [
+      "Good out-of-the-box GPU support",
+      "Clean tiling workflow",
+      "Friendly for newcomers"
+    ],
+    "cons": [
+      "Tied to one company's direction",
+      "COSMIC is a new desktop (first stable release December 2025) and still maturing"
+    ],
+    "traits": {
+      "beginner": 4,
+      "stability": 3,
+      "freshness": 3,
+      "customization": 3,
+      "gaming": 4,
+      "lowSpec": 2,
+      "lowMaintenance": 4
+    },
+    "website": "https://system76.com/pop",
+    "lastVerified": "2026-10-28",
+    "confidence": "high",
+    "sources": [
+      "https://system76.com/blog/post/pop-os-letter-from-our-founder",
+      "https://linuxiac.com/?p=203383"
+    ],
+    "verificationNote": "24.04 LTS with COSMIC stable released December 2025, built on Ubuntu 24.04. GPU-support claim comes from general knowledge and is not yet sourced.",
+    "liveDesktop": true
+  },
+  {
+    "slug": "bazzite",
+    "name": "Bazzite",
+    "base": "Fedora Atomic",
+    "packageManager": "rpm-ostree, Flatpak, Homebrew (plus ujust helper commands)",
+    "releaseModel": "image-based",
+    "desktops": [
+      "KDE Plasma",
+      "GNOME"
+    ],
+    "difficulty": "beginner",
+    "summary": "A gaming-focused, image-based system that's hard to break.",
+    "bestFor": "Gamers who want a console-like, low-maintenance experience.",
+    "pros": [
+      "Gaming tools preinstalled (Steam, Lutris and others)",
+      "Read-only system with atomic updates and easy rollbacks",
+      "Separate images with Nvidia drivers included"
+    ],
+    "cons": [
+      "Software is installed differently from traditional distros (Flatpak, Homebrew, layering)",
+      "Less flexible for deep system changes"
+    ],
+    "traits": {
+      "beginner": 4,
+      "stability": 4,
+      "freshness": 4,
+      "customization": 2,
+      "gaming": 5,
+      "lowSpec": 2,
+      "lowMaintenance": 5
+    },
+    "website": "https://bazzite.gg",
+    "lastVerified": "2026-10-28",
+    "confidence": "high",
+    "sources": [
+      "https://docs.bazzite.gg/General/FAQ/",
+      "https://github.com/ublue-os/bazzite"
+    ],
+    "verificationNote": "Confirmed against Bazzite docs and repo: Fedora Atomic base, KDE and GNOME images, Steam Gaming Mode variants for handhelds and HTPCs.",
+    "liveDesktop": true,
+    "specialty": "gaming"
+  },
+  {
+    "slug": "arch-linux",
+    "name": "Arch Linux",
+    "base": "Independent",
+    "packageManager": "pacman",
+    "releaseModel": "rolling",
+    "desktops": [
+      "Your choice"
+    ],
+    "difficulty": "advanced",
+    "summary": "A minimal, do-it-yourself rolling distro with excellent documentation and a guided installer.",
+    "bestFor": "Experienced users who want full control and the newest software.",
+    "pros": [
+      "Newest software",
+      "Total control",
+      "Superb wiki and the AUR",
+      "archinstall guided installer on the official ISO"
+    ],
+    "cons": [
+      "You assemble the system yourself, including the desktop, even with archinstall",
+      "Rolling updates need regular attention (read Arch news before big upgrades)"
+    ],
+    "traits": {
+      "beginner": 1,
+      "stability": 2,
+      "freshness": 5,
+      "customization": 5,
+      "gaming": 4,
+      "lowSpec": 3,
+      "lowMaintenance": 1
+    },
+    "website": "https://archlinux.org",
+    "lastVerified": "2026-10-28",
+    "confidence": "medium",
+    "sources": [
+      "https://linuxtoday-net.pages.dev/news/arch/",
+      "https://en.wikipedia.org/wiki/Arch_Linux"
+    ],
+    "verificationNote": "Rolling release, pacman, AUR and archinstall confirmed via secondary sources. Re-check on archlinux.org before launch.",
+    "liveDesktop": false
+  },
+  {
+    "slug": "endeavouros",
+    "name": "EndeavourOS",
+    "base": "Arch",
+    "packageManager": "pacman",
+    "releaseModel": "rolling",
+    "desktops": [
+      "KDE Plasma",
+      "GNOME",
+      "Xfce",
+      "Cinnamon",
+      "MATE",
+      "Budgie",
+      "LXQt",
+      "i3 and other tiling WMs"
+    ],
+    "difficulty": "intermediate",
+    "summary": "Arch with a friendly graphical installer and a close-to-vanilla experience.",
+    "bestFor": "People who want Arch's freshness without the manual install.",
+    "pros": [
+      "Easy Arch install",
+      "Newest software",
+      "Access to the AUR"
+    ],
+    "cons": [
+      "Rolling releases need regular care",
+      "Terminal comfort helps"
+    ],
+    "traits": {
+      "beginner": 2,
+      "stability": 2,
+      "freshness": 5,
+      "customization": 5,
+      "gaming": 4,
+      "lowSpec": 3,
+      "lowMaintenance": 2
+    },
+    "website": "https://endeavouros.com",
+    "lastVerified": "2026-10-28",
+    "confidence": "medium",
+    "sources": [
+      "https://linuxiac.com/endeavouros-artemis-neo/",
+      "https://www.opensourcefeed.org/distribution/endeavour"
+    ],
+    "verificationNote": "Arch base, Calamares installer, offline vs online install confirmed. Sources disagree on the default offline desktop (Xfce vs KDE Plasma), and Hyprland support was not confirmed, so it was removed. Check endeavouros.com before launch.",
+    "liveDesktop": true
+  },
+  {
+    "slug": "opensuse-tumbleweed",
+    "name": "openSUSE Tumbleweed",
+    "base": "Independent",
+    "packageManager": "zypper",
+    "releaseModel": "rolling",
+    "desktops": [
+      "KDE Plasma (flagship)",
+      "GNOME",
+      "Xfce",
+      "Others"
+    ],
+    "difficulty": "intermediate",
+    "summary": "A tested rolling release with strong system snapshot and rollback tools.",
+    "bestFor": "Users who want new software but a safety net when updates go wrong.",
+    "pros": [
+      "Fresh software, tested by openQA before release",
+      "Btrfs and Snapper snapshots with rollback by default",
+      "Great KDE integration"
+    ],
+    "cons": [
+      "Smaller community than Ubuntu or Fedora",
+      "Official docs note a rolling release can occasionally ship a system-breaking update"
+    ],
+    "traits": {
+      "beginner": 2,
+      "stability": 3,
+      "freshness": 5,
+      "customization": 4,
+      "gaming": 3,
+      "lowSpec": 2,
+      "lowMaintenance": 3
+    },
+    "website": "https://get.opensuse.org/tumbleweed",
+    "lastVerified": "2026-10-28",
+    "confidence": "high",
+    "sources": [
+      "https://doc.opensuse.org/documentation/tumbleweed/snapper/",
+      "https://www.suse.com/c/opensuse-tumbleweed-the-stable-rolling-release-linux-distribution"
+    ],
+    "verificationNote": "Confirmed via openSUSE documentation and SUSE: rolling, zypper, Btrfs and Snapper by default, openQA testing.",
+    "liveDesktop": true
+  },
+  {
+    "slug": "nixos",
+    "name": "NixOS",
+    "base": "Independent",
+    "packageManager": "nix",
+    "releaseModel": "declarative",
+    "desktops": [
+      "Your choice"
+    ],
+    "difficulty": "advanced",
+    "summary": "Your whole system defined in config files: reproducible, rollback-friendly, with stable releases twice a year and a rolling unstable branch.",
+    "bestFor": "Tinkerers and developers who want a fully reproducible setup.",
+    "pros": [
+      "Reproducible system",
+      "Easy rollbacks",
+      "Deep customization"
+    ],
+    "cons": [
+      "Steep learning curve",
+      "Unlike other distros, so tutorials often don't apply"
+    ],
+    "traits": {
+      "beginner": 1,
+      "stability": 3,
+      "freshness": 4,
+      "customization": 5,
+      "gaming": 3,
+      "lowSpec": 2,
+      "lowMaintenance": 2
+    },
+    "website": "https://nixos.org",
+    "lastVerified": "2026-10-28",
+    "confidence": "high",
+    "sources": [
+      "https://wiki.nixos.org/wiki/Overview_of_the_NixOS_Linux_distribution",
+      "https://en.wikipedia.org/wiki/NixOS"
+    ],
+    "verificationNote": "Confirmed via NixOS wiki: declarative configuration, atomic upgrades and rollbacks, stable releases in late May and late November.",
+    "liveDesktop": false
+  }
+]

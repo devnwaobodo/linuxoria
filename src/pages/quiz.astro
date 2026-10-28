@@ -1,0 +1,13 @@
+---
+import Base from "../layouts/Base.astro";
+const emailAction = import.meta.env.PUBLIC_EMAIL_FORM_ACTION ?? "";
+---
+
+<Base title="Find your Linux distro: the Linuxoria quiz">
+  <main id="app" class="wrap-narrow" data-email-action={emailAction}>
+    <noscript>The quiz needs JavaScript. You can still <a href="/distros/">browse all distros</a>.</noscript>
+  </main>
+  <script>
+    import "../scripts/quiz";
+  </script>
+</Base>

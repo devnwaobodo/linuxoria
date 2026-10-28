@@ -1,0 +1,21 @@
+---
+import Base from "../../layouts/Base.astro";
+import distros from "../../data/distros.json";
+---
+
+<Base title="All Linux distros | Linuxoria">
+  <main class="wrap-wide">
+    <p class="eyebrow">Browse</p>
+    <h1>All distros</h1>
+    <p class="lede">Not sure where to start? <a class="link-accent" href="/quiz/">Take the quiz</a> and we’ll narrow it down.</p>
+    <div class="grid">
+      {distros.map((d) => (
+        <a href={`/distros/${d.slug}/`} class="card" style="text-decoration: none; color: inherit">
+          <h3>{d.name}</h3>
+          <p>{d.summary}</p>
+          <p style="font-size: 14px">Difficulty: {d.difficulty}</p>
+        </a>
+      ))}
+    </div>
+  </main>
+</Base>

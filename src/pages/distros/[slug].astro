@@ -1,0 +1,62 @@
+---
+import Base from "../../layouts/Base.astro";
+import distros from "../../data/distros.json";
+
+export function getStaticPaths() {
+  return distros.map((distro) => ({ params: { slug: distro.slug }, props: { distro } }));
+}
+
+const { distro } = Astro.props;
+const verified = distro.lastVerified
+  ? new Date(distro.lastVerified + "T00:00:00Z").toLocaleDateString("en-US", {
+      year: "numeric", month: "long", day: "numeric", timeZone: "UTC",
+    })
+  : "not yet verified";
+---
+
+<Base title={`${distro.name}: who it’s for, pros and cons | Linuxoria`} description={`${distro.name}: ${distro.summary} Best for: ${distro.bestFor}`}>
+  <main class="wrap-wide">
+    <div class="stack">
+      <div>
+        <p class="eyebrow"><a href="/distros/" style="color: inherit">All distros</a></p>
+        <h1>{distro.name}</h1>
+        <p class="lede">{distro.summary}</p>
+        <p class="lede"><strong>Best for:</strong> {distro.bestFor}</p>
+      </div>
+
+      <dl class="facts card" style="flex-direction: row; flex-wrap: wrap;">
+        <div><dt>Base</dt><dd>{distro.base}</dd></div>
+        <div><dt>Package manager</dt><dd>{distro.packageManager}</dd></div>
+        <div><dt>Release model</dt><dd>{distro.releaseModel}</dd></div>
+        <div><dt>Difficulty</dt><dd>{distro.difficulty}</dd></div>
+        <div><dt>Desktops</dt><dd>{distro.desktops.join(", ")}</dd></div>
+      </dl>
+
+      <div class="alts">
+        <div class="card"><h2>Pros</h2><ul class="plain">{distro.pros.map((p) => <li>{p}</li>)}</ul></div>
+        <div class="card"><h2>Worth knowing</h2><ul class="plain">{distro.cons.map((c) => <li>{c}</li>)}</ul></div>
+      </div>
+
+      {distro.liveDesktop && (
+        <section class="try" id="try-it">
+          <div>
+            <strong>Try {distro.name} before you install it</strong>
+            <p>
+              Download the official image from <a href={distro.website} rel="noopener">{new URL(distro.website).hostname}</a>,
+              write it to a USB stick with a tool such as balenaEtcher or Ventoy, restart, and pick the USB stick
+              from your boot menu. Choose the “try” option and nothing on your computer changes.
+            </p>
+          </div>
+        </section>
+      )}
+
+      <p class="note">
+        Last verified {verified} ({distro.confidence} confidence). {distro.verificationNote}
+      </p>
+      <details>
+        <summary>Sources</summary>
+        <ul class="plain">{distro.sources.map((s) => <li><a href={s} rel="noopener">{s}</a></li>)}</ul>
+      </details>
+    </div>
+  </main>
+</Base>
